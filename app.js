@@ -54,5 +54,5 @@ app.use(function(err, req, res, next) {
     res.render('pages-500-error');
 });
 
-global.Webservice = 'http://' + config.webIP + ':' + config.webPort + '/Modules';
+global.Webservice = 'http://' + config.webIP + ':' + config.webPort + '/Module';
 module.exports = app;
