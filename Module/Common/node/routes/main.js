@@ -1,5 +1,5 @@
-var mainCtrl = require('../controller/Main');
+var mainCtrl = require('../controller/Main.js');
 
 module.exports = function(app) {
-    app.get('/', mainCtrl.Index);
+    app.get('/main', mainCtrl.Index);
 }
