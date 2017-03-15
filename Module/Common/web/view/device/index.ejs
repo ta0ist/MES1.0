@@ -1,99 +1,105 @@
 <html>
-<head>
-<% include ../../../../../views/head %>
-</head>
-<body id="tables" class="full-layout  nav-right-hide nav-right-start-hide  nav-top-fixed      responsive    clearfix" data-active="tables "  data-smooth-scrolling="1">
-<div class="vd_body">
-<% include ../../../../../views/header %>
-<div class="content">
-<div class="container">
-    <% include ../../../../../views/menu %>
 
-    <div class="vd_content-wrapper" style="min-height: 1059px;">
+<head>
+  <% include ../../../../../views/head %>
+</head>
+
+<body id="tables" class="full-layout nav-right-hide nav-right-start-hide nav-top-fixed responsive clearfix" data-active="tables " data-smooth-scrolling="1">
+
+<div class="vd-bady">
+  <% include ../../../../../views/header %>
+  <div class="content">
+    <div class="container">
+      <% include ../../../../../views/menu %>
+
+      <div class="vd_content-wrapper" style="min-height: 1059px;">
         <div class="vd_container" style="min-height: 1059px;">
-            <div class="vd_content clearfix" style="min-height: 1059px;">
+          <div class="vd_content clearfix" style="min-height:1059px;">
             <div class="vd_head-section clearfix">
-                <div class="vd_panel-header">
-                    <ul class="breadcrumb">
-                        <li><a href="index.html">Home</a> </li>
-                        <li><a href="listtables-tables-variation.html">List &amp; Tables</a> </li>
-                        <li class="active">Tables Variation</li>
-                    </ul>
-                    <div class="vd_panel-menu hidden-sm hidden-xs" data-intro="<strong>Expand Control</strong><br/>To expand content page horizontally, vertically, or Both. If you just need one button just simply remove the other button code." data-step="5" data-position="left">
-                        <div data-action="remove-navbar" data-original-title="Remove Navigation Bar Toggle" data-toggle="tooltip" data-placement="bottom" class="remove-navbar-button menu"> <i class="glyphicon fa fa-arrows-h"></i> </div>
-                        <div data-action="remove-header" data-original-title="Remove Top Menu Toggle" data-toggle="tooltip" data-placement="bottom" class="remove-header-button menu"> <i class="glyphicon fa fa-arrows-v"></i> </div>
-                        <div data-action="fullscreen" data-original-title="Remove Navigation Bar and Top Menu Toggle" data-toggle="tooltip" data-placement="bottom" class="fullscreen-button menu"> <i class="glyphicon glyphicon-fullscreen"></i> </div>
-                    </div>
+              <div class="vd_panel-header">
+                <ul class="breadcrumb">
+                  <li><a href="index.html">主页</a> </li>
+                  <li><a href="listtables-tables-variation.html">系统设置</a> </li>
+                  <li class="active">设备管理</li>
+                </ul>
+                <div class="vd_panel-menu hidden-sm hidden-xs" data-intro="<strong>Expand Control</strong><br/>To expand content page horizontally, vertically, or Both. If you just need one button just simply remove the other button code." data-step="5" data-position="left">
+                  <div data-action="remove-navbar" data-original-title="移除侧边菜单" data-toggle="tooltip" data-placement="bottom" class="remove-navbar-button menu"> <i class="glyphicon fa fa-arrows-h"></i> </div>
+                  <div data-action="remove-header" data-original-title="移除顶部菜单" data-toggle="tooltip" data-placement="bottom" class="remove-header-button menu"> <i class="glyphicon fa fa-arrows-v"></i> </div>
+                  <div data-action="fullscreen" data-original-title="移除侧边及顶部菜单" data-toggle="tooltip" data-placement="bottom" class="fullscreen-button menu"> <i class="glyphicon glyphicon-fullscreen"></i> </div>
                 </div>
+              </div>
             </div>
+
             <div class="vd_title-section clearfix">
-                <div class="vd_panel-header">
-                <h1>Tables Variation</h1>
-                <small class="subtitle">List of table variation</small> </div>
+              <div class="vd_panel-header">
+                <h1>设备管理</h1>
+                <small class="subtitle">设备和设备组管理</small> 
+              </div>
             </div>
+
             <div class="vd_content-section clearfix">
-                <div class="row">
-                <div class="col-md-12">
-                    <div class="panel widget">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="panel widget">
+                  <div style='margin-bottom:5px;'>
+                    <button class='btn vd_btn vd_bg-twitter'>新增 <i class=' fa fa-plus-circle'></i></button>
+                    <button class='btn vd_btn vd_bg-yellow'>编辑 <i class ='fa fa-pencil'></i></button>
+                    <button class='btn vd_btn vd_bg-googleplus'>删除 <i class = 'fa fa-times'></i></button>
+                    </div>
                     <div class="panel-heading vd_bg-grey">
-                        <h3 class="panel-title"> <span class="menu-icon"> <i class="fa fa-dot-circle-o"></i> </span> Table Basic with Hover </h3>
+                      <h3 class="panel-title"> <span class="menu-icon"> <i class="fa fa-dot-circle-o"></i> </span> 设备组 </h3>
                     </div>
                     <div class="panel-body table-responsive">
-                        <table class="table table-hover">
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-9">
+                  <div class="panel widget">
+                  <div style='margin-bottom:5px;'>
+                  <form class="form-inline" style='margin-bottom:5px;'>
+                      <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
+                          <input type="text" class="form-control" id="username" placeholder="设备名称">
+                        </div>
+                        <button class='btn vd_btn vd_bg-twitter'>新增 <i class=' fa fa-plus-circle'></i></button>
+                        </form>
+                      </div>
+                    
+                    </div>
+                    <div class="panel-heading vd_bg-grey">
+                      <h3 class="panel-title"> <span class="menu-icon"> <i class="fa fa-dot-circle-o"></i> </span> 设备信息 </h3>
+                    </div>
+
+                    <div class="panel-body table-responsive">
+                      <table class="table table-hover">
                         <thead>
-                            <tr>
-                            <th>#</th>
-                            <th>Username</th>
-                            <th>Date registered</th>
-                            <th>Role</th>
-                            <th>Status</th>
-                            <th>Action</th>
-                            </tr>
+                          <tr>
+                            <th>序号</th>
+                            <th>设备编号</th>
+                            <th>设备名称</th>
+                            <th>设备类型</th>
+                            <th>设备状态</th>
+                            <th>操作</th>
+                          </tr>
                         </thead>
+                        
                         <tbody>
-                            <tr>
-                            <td>1</td>
+                          <tr>
+                            <td>{{$index+1}}</td>
                             <td>Johann Un</td>
                             <td class="center">2010/02/03</td>
                             <td class="center">Member</td>
-                            <td class="center"><span class="label label-success">Active</span></td>
-                            <td class="menu-action"><a data-original-title="view" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-green vd_green"> <i class="fa fa-eye"></i> </a> <a data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"> <i class="fa fa-pencil"></i> </a> <a data-original-title="delete" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"> <i class="fa fa-times"></i> </a></td>
-                            </tr>
-                            <tr>
-                            <td>2</td>
-                            <td>Petrus Dar</td>
-                            <td class="center">2012/01/15</td>
-                            <td class="center">Staff</td>
-                            <td class="center"><span class="label label-danger">Banned</span></td>
-                            <td class="menu-action"><a data-original-title="view" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-green vd_green"> <i class="fa fa-eye"></i> </a> <a data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"> <i class="fa fa-pencil"></i> </a> <a data-original-title="delete" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"> <i class="fa fa-times"></i> </a></td>
-                            </tr>
-                            <tr>
-                            <td>3</td>
-                            <td>Zeibsein Gunchineer</td>
-                            <td class="center">2013/02/01</td>
-                            <td class="center">Admin</td>
-                            <td class="center"><span class="label label-default">Inactive</span></td>
-                            <td class="menu-action"><a data-original-title="view" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-green vd_green"> <i class="fa fa-eye"></i> </a> <a data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"> <i class="fa fa-pencil"></i> </a> <a data-original-title="delete" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"> <i class="fa fa-times"></i> </a></td>
-                            </tr>
-                            <tr>
-                            <td>4</td>
-                            <td>Goergia Zullivan</td>
-                            <td class="center">2013/06/20</td>
-                            <td class="center">Member</td>
-                            <td class="center"><span class="label label-warning">Pending</span></td>
-                            <td class="menu-action"><a data-original-title="view" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-green vd_green"> <i class="fa fa-eye"></i> </a> <a data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"> <i class="fa fa-pencil"></i> </a> <a data-original-title="delete" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"> <i class="fa fa-times"></i> </a></td>
-                            </tr>
-                            <tr>
-                            <td>5</td>
-                            <td>Tresshold Compe</td>
-                            <td class="center">2011/02/13</td>
-                            <td class="center">Staff</td>
-                            <td class="center"><span class="label label-success">Active</span></td>
-                            <td class="menu-action"><a data-original-title="view" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-green vd_green"> <i class="fa fa-eye"></i> </a> <a data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"> <i class="fa fa-pencil"></i> </a> <a data-original-title="delete" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"> <i class="fa fa-times"></i> </a></td>
-                            </tr>
+                            <td class="center"><input type="checkbox" data-rel="switch" data-size="mini" data-wrapper-class="green" checked></td>
+                            <td class="menu-action">
+                              <a data-original-title="查看" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-green vd_green"> <i class="fa fa-eye"></i> </a> 
+                              <a data-original-title="编辑" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"> <i class="fa fa-pencil"></i> </a> 
+                              <a data-original-title="删除" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"> <i class="fa fa-times"></i> </a></td>
+                          </tr>               
                         </tbody>
-                        </table>
-                        <ul class="pagination">
+                      </table>
+                      <ul class="pagination">
                         <li><a href="#">«</a></li>
                         <li class="active"><a href="#">1</a></li>
                         <li><a href="#">2</a></li>
@@ -101,24 +107,65 @@
                         <li><a href="#">4</a></li>
                         <li><a href="#">5</a></li>
                         <li><a href="#">»</a></li>
-                        </ul>
+                      </ul>
                     </div>
-                    </div>
-                    <!-- Panel Widget --> 
-                </div>
-                <!-- col-md-12 --> 
-                </div>
-                <!-- row -->
+                  </div>
+                </div> 
+              </div>
             </div>
-            <!-- .vd_content-section --> 
-            </div>
-            <!-- .vd_content --> 
-        </div>
-        <!-- .vd_container --> 
-    </div>
 
-</div>
-</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+ <!--modal-->
+<div class="modal fade in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="display: block;">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header vd_bg-blue vd_white">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+                          <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                        </div>
+                        <div class="modal-body"> 
+                        	<form class="form-horizontal">
+                            <div class="form-group">
+                              <label class="col-sm-4 control-label">First Name</label>
+                              <div class="col-sm-7 controls">
+                                <input class="input-border-btm" type="text">
+                              </div>
+
+                            </div>
+                            <div class="form-group">
+                              <label class="col-sm-4 control-label">User Name</label>
+                              <div class="col-sm-7 controls">
+                                <input class="input-border-btm" type="text">
+                              </div>
+
+                            </div>
+                            <div class="form-group">
+                              <label class="col-sm-4 control-label">Password</label>
+                              <div class="col-sm-7 controls">
+                                <input class="input-border-btm" type="password">
+                              </div>
+
+                            </div>
+                            
+                            
+                          </form>
+                        
+                        </div>
+                        <div class="modal-footer background-login">
+                          <button type="button" class="btn vd_btn vd_bg-grey" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn vd_btn vd_bg-green">Save changes</button>
+                        </div>
+                      </div>
+                      <!-- /.modal-content --> 
+                    </div>
+                    <!-- /.modal-dialog --> 
+                  </div>
+
 <% include ../../../../../views/footer %>
 </div>
 <% include ../../../../../views/all_js %>
