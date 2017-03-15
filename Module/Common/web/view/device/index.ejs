@@ -33,61 +33,64 @@
             <div class="vd_title-section clearfix">
               <div class="vd_panel-header">
                 <h1>设备管理</h1>
-                <small class="subtitle">设备和设备组管理</small> 
+                <small class="subtitle">设备及设备组管理</small> 
               </div>
             </div>
 
             <div class="vd_content-section clearfix">
               <div class="row">
+
                 <div class="col-md-3">
+                  <div style="margin-bottom: 5px;">
+                    <button class="btn vd_btn vd_bg-twitter" type="button" data-toggle="modal" data-target="#Modal1">新增 <i class=' fa fa-plus-circle'></i></button>
+                    <button class="btn vd_btn vd_bg-yellow" type="button" data-toggle="modal" data-target="#Modal2">编辑 <i class=' fa fa-pencil'></i></button>
+                    <button class="btn vd_btn vd_bg-googleplus" type="button" data-toggle="modal" data-target="#Modal3">删除 <i class=' fa fa-times'></i></button>
+                  </div>
+
+                  <!--设备组表-->
                   <div class="panel widget">
-                  <div style='margin-bottom:5px;'>
-                    <button class='btn vd_btn vd_bg-twitter'>新增 <i class=' fa fa-plus-circle'></i></button>
-                    <button class='btn vd_btn vd_bg-yellow'>编辑 <i class ='fa fa-pencil'></i></button>
-                    <button class='btn vd_btn vd_bg-googleplus'>删除 <i class = 'fa fa-times'></i></button>
-                    </div>
                     <div class="panel-heading vd_bg-grey">
-                      <h3 class="panel-title"> <span class="menu-icon"> <i class="fa fa-dot-circle-o"></i> </span> 设备组 </h3>
+                      <h3 class="panel-title">设备组</h3> 
                     </div>
                     <div class="panel-body table-responsive">
                       
                     </div>
                   </div>
                 </div>
+
                 <div class="col-md-9">
-                  <div class="panel widget">
-                  <div style='margin-bottom:5px;'>
-                  <form class="form-inline" style='margin-bottom:5px;'>
+                  <div style="margin-bottom: 5px;">
+                    <form class="form-inline" style="margin-bottom: 5px;">
                       <div class="form-group">
                         <div class="input-group">
                           <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
-                          <input type="text" class="form-control" id="username" placeholder="设备名称">
-                        </div>
-                        <button class='btn vd_btn vd_bg-twitter'>新增 <i class=' fa fa-plus-circle'></i></button>
-                        </form>
+                          <input type="text" class="form-control" id="username" placeholder="模糊查询">
                       </div>
-                    
-                    </div>
+                      <button class="btn vd_btn vd_bg-twitter" type="button" data-toggle="modal" data-target="#Modal1">新增 <i class=' fa fa-plus-circle'></i></button>
+                    </form>
+                  </div>
+                  
+                  <!--用户表-->
+                  <div class="panel widget">
                     <div class="panel-heading vd_bg-grey">
-                      <h3 class="panel-title"> <span class="menu-icon"> <i class="fa fa-dot-circle-o"></i> </span> 设备信息 </h3>
+                      <h3 class="panel-title">设备详细信息</h3>
                     </div>
-
                     <div class="panel-body table-responsive">
                       <table class="table table-hover">
                         <thead>
                           <tr>
-                            <th>序号</th>
-                            <th>设备编号</th>
+                            <th></th>
                             <th>设备名称</th>
                             <th>设备类型</th>
-                            <th>设备状态</th>
+                            <th>设备编号</th>
+                            <th>启用/禁用</th>
                             <th>操作</th>
                           </tr>
                         </thead>
                         
                         <tbody>
                           <tr>
-                            <td>{{$index+1}}</td>
+                            <td>1</td>
                             <td>Johann Un</td>
                             <td class="center">2010/02/03</td>
                             <td class="center">Member</td>
@@ -96,7 +99,16 @@
                               <a data-original-title="查看" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-green vd_green"> <i class="fa fa-eye"></i> </a> 
                               <a data-original-title="编辑" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"> <i class="fa fa-pencil"></i> </a> 
                               <a data-original-title="删除" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"> <i class="fa fa-times"></i> </a></td>
-                          </tr>               
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Petrus Dar</td>
+                            <td class="center">2012/01/15</td>
+                            <td class="center">Staff</td>
+                            <td class="center"><input type="checkbox" data-rel="switch" data-size="mini" data-wrapper-class="green" checked></td>
+                            <td class="menu-action"><a data-original-title="view" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-green vd_green"> <i class="fa fa-eye"></i> </a> <a data-original-title="edit" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-yellow vd_yellow"> <i class="fa fa-pencil"></i> </a> <a data-original-title="delete" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"> <i class="fa fa-times"></i> </a></td>
+                          </tr>
+                          
                         </tbody>
                       </table>
                       <ul class="pagination">
@@ -113,20 +125,15 @@
                 </div> 
               </div>
             </div>
-
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-  
- <!--modal-->
-<div class="modal fade in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="display: block;">
+
+                  <div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header vd_bg-blue vd_white">
                           <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
-                          <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                          <h4 class="modal-title" id="myModalLabel">新增设备组</h4>
                         </div>
                         <div class="modal-body"> 
                         	<form class="form-horizontal">
@@ -135,36 +142,96 @@
                               <div class="col-sm-7 controls">
                                 <input class="input-border-btm" type="text">
                               </div>
+                            </div>                    
+                          </form>
+                        </div>
+                        <div class="modal-footer background-login">
+                          <button type="button" class="btn vd_btn vd_bg-grey" data-dismiss="modal">取消</button>
+                          <button type="button" class="btn vd_btn vd_bg-green">确认</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-                            </div>
+                  <div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header vd_bg-blue vd_white">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+                          <h4 class="modal-title" id="myModalLabel">编辑设备组</h4>
+                        </div>
+                        <div class="modal-body"> 
+                        	<form class="form-horizontal">
                             <div class="form-group">
-                              <label class="col-sm-4 control-label">User Name</label>
+                              <label class="col-sm-4 control-label">First Name</label>
                               <div class="col-sm-7 controls">
                                 <input class="input-border-btm" type="text">
                               </div>
-
-                            </div>
-                            <div class="form-group">
-                              <label class="col-sm-4 control-label">Password</label>
-                              <div class="col-sm-7 controls">
-                                <input class="input-border-btm" type="password">
-                              </div>
-
-                            </div>
-                            
-                            
+                            </div>                    
                           </form>
-                        
                         </div>
                         <div class="modal-footer background-login">
-                          <button type="button" class="btn vd_btn vd_bg-grey" data-dismiss="modal">Close</button>
-                          <button type="button" class="btn vd_btn vd_bg-green">Save changes</button>
+                          <button type="button" class="btn vd_btn vd_bg-grey" data-dismiss="modal">取消</button>
+                          <button type="button" class="btn vd_btn vd_bg-green">确认</button>
                         </div>
                       </div>
-                      <!-- /.modal-content --> 
                     </div>
-                    <!-- /.modal-dialog --> 
                   </div>
+
+                  <div class="modal fade" id="Modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header vd_bg-blue vd_white">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+                          <h4 class="modal-title" id="myModalLabel">删除设备组</h4>
+                        </div>
+                        <div class="modal-body"> 
+                        	<form class="form-horizontal">
+                            <div class="form-group">
+                              <label class="col-sm-4 control-label">First Name</label>
+                              <div class="col-sm-7 controls">
+                                <input class="input-border-btm" type="text">
+                              </div>
+                            </div>                    
+                          </form>
+                        </div>
+                        <div class="modal-footer background-login">
+                          <button type="button" class="btn vd_btn vd_bg-grey" data-dismiss="modal">取消</button>
+                          <button type="button" class="btn vd_btn vd_bg-googleplus">确认</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="modal fade" id="Modal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header vd_bg-blue vd_white">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+                          <h4 class="modal-title" id="myModalLabel">删除设备组</h4>
+                        </div>
+                        <div class="modal-body"> 
+                        	<form class="form-horizontal">
+                            <div class="form-group">
+                              <label class="col-sm-4 control-label">First Name</label>
+                              <div class="col-sm-7 controls">
+                                <input class="input-border-btm" type="text">
+                              </div>
+                            </div>                    
+                          </form>
+                        </div>
+                        <div class="modal-footer background-login">
+                          <button type="button" class="btn vd_btn vd_bg-grey" data-dismiss="modal">取消</button>
+                          <button type="button" class="btn vd_btn vd_bg-googleplus">确认</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+      </div>
+    </div>
+  </div>
+
 
 <% include ../../../../../views/footer %>
 </div>
