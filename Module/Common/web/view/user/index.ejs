@@ -20,7 +20,7 @@
                 <ul class="breadcrumb">
                   <li><a href="index.html">主页</a> </li>
                   <li><a href="listtables-tables-variation.html">系统设置</a> </li>
-                  <li class="active">用户管理</li>
+                  <li class="active">账户管理</li>
                 </ul>
                 <div class="vd_panel-menu hidden-sm hidden-xs" data-intro="<strong>Expand Control</strong><br/>To expand content page horizontally, vertically, or Both. If you just need one button just simply remove the other button code." data-step="5" data-position="left">
                   <div data-action="remove-navbar" data-original-title="移除侧边菜单" data-toggle="tooltip" data-placement="bottom" class="remove-navbar-button menu"> <i class="glyphicon fa fa-arrows-h"></i> </div>
@@ -32,8 +32,8 @@
 
             <div class="vd_title-section clearfix">
               <div class="vd_panel-header">
-                <h1>用户管理</h1>
-                <small class="subtitle">用户及用户组管理</small> 
+                <h1>账户管理</h1>
+                <small class="subtitle">账户及账户组管理</small> 
               </div>
             </div>
 
@@ -50,7 +50,7 @@
                   <!--用户组表-->
                   <div class="panel widget">
                     <div class="panel-heading vd_bg-grey">
-                      <h3 class="panel-title">用户组</h3> 
+                      <h3 class="panel-title">账户组</h3> 
                     </div>
                     <div class="panel-body table-responsive">
                       
@@ -73,16 +73,17 @@
                   <!--用户表-->
                   <div class="panel widget">
                     <div class="panel-heading vd_bg-grey">
-                      <h3 class="panel-title">用户详细信息</h3>
+                      <h3 class="panel-title">账户详细信息</h3>
                     </div>
                     <div class="panel-body table-responsive">
                       <table class="table table-hover">
                         <thead>
                           <tr>
+                            <th><input type="checkbox" id="chk-all">全选</th>
                             <th></th>
-                            <th>用户名称</th>
+                            <th>账户名称</th>
+                            <th>上次登录时间</th>
                             <th>用户类型</th>
-                            <th>用户备注</th>
                             <th>启用/禁用</th>
                             <th>操作</th>
                           </tr>
@@ -90,6 +91,7 @@
                         
                         <tbody>
                           <tr>
+                            <td><input type="checkbox"></td>
                             <td>1</td>
                             <td>Johann Un</td>
                             <td class="center">2010/02/03</td>
@@ -101,6 +103,7 @@
                               <a data-original-title="删除" data-toggle="tooltip" data-placement="top" class="btn menu-icon vd_bd-red vd_red"> <i class="fa fa-times"></i> </a></td>
                           </tr>
                           <tr>
+                            <td><input type="checkbox"></td>
                             <td>2</td>
                             <td>Petrus Dar</td>
                             <td class="center">2012/01/15</td>
