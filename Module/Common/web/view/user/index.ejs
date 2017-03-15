@@ -4,7 +4,7 @@
   <% include ../../../../../views/head %>
 </head>
 
-<body id="tables" class="full-layout nav-right-hide nav-right-start-hide nav-top-fixed responsive clearfix" data-active="tables " data-smooth-scrolling="1">
+<body ng-app="user" ng-controller="userCtrl" id="tables" class="full-layout nav-right-hide nav-right-start-hide nav-top-fixed responsive clearfix" data-active="tables " data-smooth-scrolling="1">
 
 <div class="vd-bady">
   <% include ../../../../../views/header %>
@@ -53,7 +53,32 @@
                       <h3 class="panel-title">账户组</h3> 
                     </div>
                     <div class="panel-body table-responsive">
-                      
+                      <div class="page-aside app tree">
+                        <div class="nano nscroller">
+                          <div class="content" style="right: -17px;">
+                            <ul class="nav nav-list treeview collapse">
+                              <li><label class="tree-toggler nav-header"><i class="fa fa-folder-o"></i> General</label>
+                                <ul class="nav nav-list tree">
+                                  <li><a href="#">Link</a></li>
+                                  <li><a href="#">Link</a></li>
+                                  <li><label class="tree-toggler nav-header"><i class="fa fa-folder-o"></i> Structure</label>
+                                    <ul class="nav nav-list tree">
+                                      <li><a href="#">Link</a></li>
+                                      <li><a href="#">Link</a></li> 
+                                      <li><label class="tree-toggler nav-header"><i class="fa fa-folder-o"></i> Plugins</label>
+                                        <ul class="nav nav-list tree">
+                                          <li><a href="#">Link</a></li>
+                                          <li><a href="#">Link</a></li>
+                                        </ul>
+                                      </li>       
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>                            
+                          </div>
+                        </div>
+		                  </div>      
                     </div>
                   </div>
                 </div>
@@ -73,14 +98,14 @@
                   <!--用户表-->
                   <div class="panel widget">
                     <div class="panel-heading vd_bg-grey">
-                      <h3 class="panel-title">账户详细信息</h3>
+                      <h3 class="panel-title">账户组详细信息</h3>
                     </div>
                     <div class="panel-body table-responsive">
                       <table class="table table-hover">
                         <thead>
                           <tr>
                             <th><input type="checkbox" id="chk-all">全选</th>
-                            <th></th>
+                            <th>序号</th>
                             <th>账户名称</th>
                             <th>上次登录时间</th>
                             <th>用户类型</th>
@@ -131,7 +156,13 @@
           </div>
         </div>
 
-                  <div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+
+
+
+
+
+                  <div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false"> 
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header vd_bg-blue vd_white">
@@ -156,7 +187,7 @@
                     </div>
                   </div>
 
-                  <div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header vd_bg-blue vd_white">
@@ -181,7 +212,7 @@
                     </div>
                   </div>
 
-                  <div class="modal fade" id="Modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal fade" id="Modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header vd_bg-blue vd_white">
@@ -206,7 +237,7 @@
                     </div>
                   </div>
 
-                  <div class="modal fade" id="Modal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal fade" id="Modal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header vd_bg-blue vd_white">
@@ -239,5 +270,6 @@
 <% include ../../../../../views/footer %>
 </div>
 <% include ../../../../../views/all_js %>
+<script src='./Common/web/controller/userController.js'></script>
 </body>
 </html>
